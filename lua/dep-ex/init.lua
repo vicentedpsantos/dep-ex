@@ -31,9 +31,7 @@ local function replace_dependency_in_file(file_path, lib_name, new_line)
       table.insert(lines, "# " .. line) -- Comment out the original line
       table.insert(lines, new_line)      -- Add new dependency line
     elseif new_line == nil and line:match("#") and line:match("{:" .. lib_name) then
-      print("Aqui dentro")
       local uncommented_line = line:gsub("^%s*#", "")
-      print(uncommented_line)
       table.insert(lines, uncommented_line)
     elseif new_line == nil and line:match("{:" .. lib_name .. ", path:") then
       -- Not adding to the table will remove it
