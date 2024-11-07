@@ -2,7 +2,7 @@ local dep_ex = {}
 
 -- Default configuration
 local config = {
-  workspace = "/path/to/your/workspace",
+  workspace = "~/",
   repo_owner = "default_owner"
 }
 
